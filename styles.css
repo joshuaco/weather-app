@@ -159,6 +159,10 @@ main {
   justify-content: flex-end;
 }
 
+.details--text {
+  text-align: center;
+}
+
 .weather-details i {
   color: #06283D;
   font-size: 26px;
