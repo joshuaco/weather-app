@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Weather Wise</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav--title">
+        <i class="fa-solid fa-cloud-sun"></i>
+        <h1>Weather Wise</h1>
+      </div>
+      <div class="nav--login">
+        <i class="fa-solid fa-user"></i>
+        <p>Login</p>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card-box">
+      <div class="search-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" placeholder="Enter location">
+        <button class="fa-solid fa-search"></button>
+      </div>
+      
+      <div class="not-found">
+        <img src="./assets/img/404.png" alt="Location not found">
+        <p>Oops! location not found 😕</p>
+      </div>
+      
+      <div class="weather-box">
+        <img src="">
+        <p class="temperature"></p>
+        <p class="description"></p>
+      </div>
+      
+      <div class="weather-details">
+        <div class="humidity">
+          <i class="fa-solid fa-water"></i>
+          <div class="details--text">
+            <span></span>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="wind">
+          <i class="fa-solid fa-wind"></i>
+          <div class="details--text">
+            <span></span>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+  </footer>
+  <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
