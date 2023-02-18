@@ -109,9 +109,16 @@ main {
   text-align: center;
 }
 
+.weather-box .location {
+  color: #06283D;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
 .weather-box img {
   width: 60%;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .weather-box .temperature {
@@ -120,7 +127,6 @@ main {
   font-size: 4rem;
   font-weight: 800;
   margin-top: 30px;
-  margin-left: -16px;
 }
 
 .weather-box .temperature span {
@@ -220,6 +226,10 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  .nav--login > p {
+    display: none;
+  }
+
   .card-box {
     width: 300px;
   }

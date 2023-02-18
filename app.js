@@ -56,21 +56,25 @@ const showWeather = (data) => {
       image.src = '';
   }
 
+  image.alt = data.weather[0].main;
+
   innerData(data);
 
   weatherBox.style.display = '';
   weatherdetails.style.display = '';
   weatherBox.classList.add('fade-in');
   weatherdetails.classList.add('fade-in');
-  container.style.height = '590px';
+  container.style.height = 'auto';
 };
 
 const innerData = (data) => {
+  const location = document.querySelector('.location');
   const temp = document.querySelector('.temperature');
   const desc = document.querySelector('.description');
   const humidity = document.querySelector('.humidity span');
   const wind = document.querySelector('.wind span');
 
+  location.innerHTML = `${data.name}, ${data.sys.country}`;
   temp.innerHTML = `${Math.round(data.main.temp - 273.15)}°C`;
   desc.innerHTML = data.weather[0].description;
   humidity.innerHTML = `${data.main.humidity}%`;
