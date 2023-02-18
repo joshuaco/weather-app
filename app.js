@@ -9,8 +9,6 @@ const API_KEY = '09bbc47d930f555a60b45865905cc68f';
 search.addEventListener('click', () => {
   const city = document.querySelector('.search-box input').value;
 
-  console.log(city);
-
   if (city === '') {
     return;
   }
@@ -36,10 +34,6 @@ search.addEventListener('click', () => {
 
 const showWeather = (data) => {
   const image = document.querySelector('.weather-box img');
-  const temp = document.querySelector('.temperature');
-  const desc = document.querySelector('.description');
-  const humidity = document.querySelector('.humidity span');
-  const wind = document.querySelector('.wind span');
 
   switch (data.weather[0].main) {
     case 'Clear':
@@ -62,16 +56,25 @@ const showWeather = (data) => {
       image.src = '';
   }
 
-  temp.innerHTML = `${Math.round(data.main.temp - 273.15)}°C`;
-  desc.innerHTML = data.weather[0].description;
-  humidity.innerHTML = `${data.main.humidity}%`;
-  wind.innerHTML = `${parseInt(data.wind.speed)} km/h`;
+  innerData(data);
 
   weatherBox.style.display = '';
   weatherdetails.style.display = '';
   weatherBox.classList.add('fade-in');
   weatherdetails.classList.add('fade-in');
   container.style.height = '590px';
+};
+
+const innerData = (data) => {
+  const temp = document.querySelector('.temperature');
+  const desc = document.querySelector('.description');
+  const humidity = document.querySelector('.humidity span');
+  const wind = document.querySelector('.wind span');
+
+  temp.innerHTML = `${Math.round(data.main.temp - 273.15)}°C`;
+  desc.innerHTML = data.weather[0].description;
+  humidity.innerHTML = `${data.main.humidity}%`;
+  wind.innerHTML = `${parseInt(data.wind.speed)} km/h`;
 };
 
 const error404 = () => {
