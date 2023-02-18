@@ -23,8 +23,6 @@ search.addEventListener('click', () => {
         return;
       }
 
-      console.log(data);
-
       notFound.style.display = 'none';
       notFound.classList.remove('fade-in');
 
@@ -85,4 +83,6 @@ const error404 = () => {
   container.style.height = '400px';
   notFound.style.display = 'block';
   notFound.classList.add('fade-in');
+  weatherBox.style.display = 'none';
+  weatherdetails.style.display = 'none';
 };
